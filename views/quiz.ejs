@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クイズ</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>問題</h1>
+        <p><%= question.問題 %></p>
+        <% if (result) { %>
+            <div class="result <%= isCorrect ? 'correct' : 'incorrect' %>">
+                <%= result %>
+            </div>
+        <% } %>
+        <form action="/submit" method="post">
+            <input type="text" name="answer">
+            <button type="submit">回答</button>
+        </form>
+        <form action="/quit" method="post">
+            <button type="submit">終了</button>
+        </form>
+    </div>
+</body>
+</html>

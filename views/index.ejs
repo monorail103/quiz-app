@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クイズアプリ</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>クイズアプリ</h1>
+        <p>CSVファイルをアップロードしてください</p>
+        <p>CSVファイルの形式は以下の通りです</p>
+        <p>問題,答え</p>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="csvFile" accept=".csv" required>
+            <button type="submit">アップロード</button>
+        </form>
+    </div>
+</body>
+</html>
